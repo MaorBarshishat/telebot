@@ -12,8 +12,10 @@ This Telegram bot was developed as part of a technical assessment for an intervi
 
 ### as a docker:
 ```
-sudo docker run -d maorbarshishat/telebot_maor:2.0
+   sudo docker network create --subnet=172.18.0.0/16 net_maor
+   sudo docker run -d --net net_maor --ip 172.18.0.4 maorbarshishat/telebot_maor:2.0
 ```
+note: if net_maor was already created, an error message will appear, so plz ignore it.
 
 ### as a python command:
  ```
